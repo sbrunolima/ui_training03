@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 //Screens
-import './screens/start_screen.dart';
+import './screens/home_screen.dart';
+import './screens/auth_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,12 +10,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Crypto Currency App Design',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(brightness: Brightness.dark),
-      home: StartScreen(),
+      title: 'Banking Mobile App Design',
+      theme: ThemeData(
+        primaryColor: Colors.blue,
+      ),
+      home: AuthScreen(),
       routes: {
-        StartScreen.routeName: (ctx) => StartScreen(),
+        HomeScreen.routName: (ctx) => HomeScreen(),
       },
     );
   }
